@@ -80,7 +80,9 @@ auto ciphertext = encryptor.parallelEncrypt(plaintext, std::thread::hardware_con
 auto decrypted = encryptor.parallelDecrypt(ciphertext, std::thread::hardware_concurrency());
 
 # Output Sample
-Original plaintext: Multithreaded and GPU-offloaded encryption test message.
+- Original plaintext: 
+
+Multithreaded and GPU-offloaded encryption test message.
 Plaintext (hex): 4d 75 6c 74 69 ...
 Ciphertext (hex): a1 c4 3f ...
 Decrypted text: Multithreaded and GPU-offloaded encryption test message.
@@ -89,44 +91,44 @@ Decryption completed in Y ms.
 Encryption/Decryption test PASSED.
 
 # Limitations
-No authenticated encryption or integrity validation (e.g., MAC, HMAC, AEAD)
+- No authenticated encryption or integrity validation (e.g., MAC, HMAC, AEAD)
 
-No support for asymmetric encryption or key exchange
+- No support for asymmetric encryption or key exchange
 
-No padding scheme included (assumes plaintext size alignment)
+- No padding scheme included (assumes plaintext size alignment)
 
-XOR offload is the only GPU-accelerated primitive
+- XOR offload is the only GPU-accelerated primitive
 
-Only supports static configuration (fixed rounds, key size)
+- Only supports static configuration (fixed rounds, key size)
 
-No fallback if GPU is not available
+- No fallback if GPU is not available
 
-No stream cipher support (CBC/CTR/CFB modes not implemented)
+- No stream cipher support (CBC/CTR/CFB modes not implemented)
 
-S-box and P-box logic is custom, not cryptographically vetted
+- S-box and P-box logic is custom, not cryptographically vetted
 
 # Potential Improvements
-Add GCM/CTR mode support and secure padding
+- Add GCM/CTR mode support and secure padding
 
-Replace XOR kernel with real S-box kernel logic
+- Replace XOR kernel with real S-box kernel logic
 
-Implement full OpenCL fallback to CPU-only pipeline
+- Implement full OpenCL fallback to CPU-only pipeline
 
-Parameterize number of rounds and key sizes
+- Parameterize number of rounds and key sizes
 
-Use memory pools to avoid frequent allocations
+- Use memory pools to avoid frequent allocations
 
-Add authenticated encryption layer (e.g., Poly1305 or HMAC)
+- Add authenticated encryption layer (e.g., Poly1305 or HMAC)
 
-Add dynamic CLI or config support for tuning execution
+- Add dynamic CLI or config support for tuning execution
 
 # Use Cases
-Demonstration of multithreaded and GPU-parallelizable encryption
+- Demonstration of multithreaded and GPU-parallelizable encryption
 
-Performance benchmarking for hybrid cryptographic operations
+- Performance benchmarking for hybrid cryptographic operations
 
-Educational example for combining C++ concurrency and OpenCL
+- Educational example for combining C++ concurrency and OpenCL
 
-Research on round-based custom cipher design
+- Research on round-based custom cipher design
 
-Red team tool prototype for obfuscated data transport
+- Red team tool prototype for obfuscated data transport
