@@ -2,7 +2,7 @@
 
 ## Description
 
-**CustomEncryptor** is a high-performance, experimental encryption engine written in C++ that utilizes both multithreading and GPU offloading (via OpenCL) to perform symmetric encryption using a custom round-based transformation routine. This proof-of-concept (PoC) explores efficient, hardware-accelerated cryptographic processing with a strong emphasis on parallelization and performance tuning.
+Custom Encryption is a high-performance, experimental POC encryption engine written in C++ that utilizes both multithreading and GPU offloading (via OpenCL) to perform symmetric encryption using a custom round-based transformation routine. This proof-of-concept (PoC) explores efficient, hardware-accelerated cryptographic processing with a strong emphasis on parallelization and performance tuning.
 
 ---
 
